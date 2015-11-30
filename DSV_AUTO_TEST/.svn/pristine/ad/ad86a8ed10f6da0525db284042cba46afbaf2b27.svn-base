@@ -1,0 +1,168 @@
+package com.heb.enterprise.automationtest.globaldefaults;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.heb.enterprise.automationtest.page.GlobalDefaultPage;
+import com.heb.enterprise.automationtest.utils.Constants;
+import com.heb.enterprise.automationtest.utils.Helper;
+
+/**
+ * Test global default page.
+ * 
+ * @author huongnguyen1
+ * 
+ */
+public class GlobalDefaultTest  {
+
+	private final Logger LOG = Logger.getLogger(GlobalDefaultTest.class);
+
+	GlobalDefaultPage gdp;
+//	Menu menu;
+//	LoginPage lp;
+	WebElement tree;
+	List<WebElement> lstSubDepartments;
+	List<WebElement> lstCommoditiesOfCommodity;
+	List<WebElement> lstAllElementHaveRule;
+	List<WebElement> lstAllSubDepartmentsHaveRule = new ArrayList<WebElement>();
+	List<WebElement> lstAllCommoditiesHaveRuleByDepartment = new ArrayList<WebElement>();
+
+	@BeforeClass
+	public void setUp() {
+		gdp = new GlobalDefaultPage();
+//		menu = new Menu();
+//		lp = new LoginPage();
+		gdp.login();
+	}
+	@AfterClass
+	public void afterClass() {
+		// driver.quit();
+		gdp.close();
+	}
+	@BeforeMethod
+	public void beforeMethod() throws InterruptedException {
+		gdp.clickOnMenu(Constants.GLOBAL_URL_ID);
+		Thread.sleep(3000);
+	}
+	@Test(priority=0)
+	public void t001_loadSubDepartment() throws InterruptedException {
+		gdp.clickOnMenu(Constants.GLOBAL_URL_ID);
+		Thread.sleep(5000L);
+		gdp.checkGlobalTitle();
+		tree = gdp.treeHie;
+		lstSubDepartments = tree.findElement(By.tagName("ul")).findElements(
+				By.tagName("li"));
+		AssertJUnit.assertTrue("Have no sub department.",
+				lstSubDepartments.size() > 0);
+	}
+
+	@Test(priority=1)
+	public void t002_loadSubCommodities() throws InterruptedException {
+		if (lstSubDepartments.size() > 0) {
+			WebElement currentDepartment = lstSubDepartments.get(0);
+			currentDepartment.findElement(By.tagName("i")).click();
+			Thread.sleep(2000L);
+			lstCommoditiesOfCommodity = tree.findElement(By.tagName("ul"))
+					.findElements(By.tagName("li")).get(0)
+					.findElement(By.tagName("ul"))
+					.findElements(By.tagName("li"));
+			AssertJUnit.assertTrue("Have no commodity.",
+					lstCommoditiesOfCommodity.size() >= 0);
+		} else {
+			AssertJUnit.fail("Have no sub department.");
+		}
+	}
+
+	@Test(priority=2)
+	public void t003_loadDepartmentRule() throws InterruptedException {
+		lstSubDepartments = tree.findElement(By.tagName("ul")).findElements(
+				By.tagName("li"));
+		if (lstSubDepartments.size() > 0) {
+			lstSubDepartments.get(0).click();
+			if (gdp.listCheckbox.isEmpty()) {
+				AssertJUnit.fail("Can not display rule of sub department "
+						+ lstSubDepartments.get(0).getText());
+			} else {
+				AssertJUnit.assertTrue("Can not load rule.", gdp.listCheckbox.size() > 0);
+			}
+		} else {
+			AssertJUnit.fail("Have no sub department.");
+		}
+	}
+
+	@Test(priority=4)
+	public void t004_loadCommodityRule() {
+		lstSubDepartments = tree.findElement(By.tagName("ul")).findElements(
+				By.tagName("li"));
+		if (lstCommoditiesOfCommodity.size() > 0) {
+			lstCommoditiesOfCommodity.get(0).click();
+			if (gdp.listCheckbox.isEmpty()) {
+				AssertJUnit
+						.fail("Can not display rule of commodity lstSubDepartments.");
+			} else {
+				AssertJUnit.assertTrue("Can not load rule.", gdp.listCheckbox.size() > 0);
+			}
+		} else {
+			AssertJUnit.assertTrue("Have no commodity.",
+					lstCommoditiesOfCommodity.size() >= 0);
+		}
+	}
+
+	/**
+	 * Get all sub departments have special rules.
+	 * @throws InterruptedException
+	 */
+	public void allSubDepartmentsHaveRule() throws InterruptedException {
+		for (WebElement element : lstSubDepartments) {
+			if (element.findElement(By.tagName("a"))
+					.findElement(By.tagName("i")).getAttribute("class")
+					.contains("rule-modified")) {
+				lstAllSubDepartmentsHaveRule.add(element);
+			}
+		}
+	}
+
+	/**
+	 * Get all commodities have them's rule.
+	 * 
+	 * @param subDepartment
+	 *            SubDepartment wants to get commodities have rules.
+	 * @throws InterruptedException
+	 */
+	public void allCommoditiesHaveRuleOfSubDepartment(WebElement subDepartment)
+			throws InterruptedException {
+		if (subDepartment.isDisplayed()) {
+			// Click open all commodities of sub department.
+			String subDepId = subDepartment.getAttribute("id");
+			subDepartment.findElement(By.tagName("i")).click();
+			WebElement newSubDepartment = tree.findElement(By.id(subDepId));
+			Thread.sleep(2000L);
+			LOG.info(newSubDepartment.findElement(By.tagName("ul"))
+					.findElements(By.tagName("li")));
+			List<WebElement> listCommodites = newSubDepartment.findElement(
+					By.tagName("ul")).findElements(By.tagName("li"));
+			for (WebElement webElement : listCommodites) {
+				if (webElement.findElement(By.tagName("a"))
+						.findElement(By.tagName("i")).getAttribute("class")
+						.contains("rule-modified")) {
+					lstAllCommoditiesHaveRuleByDepartment.add(webElement);
+					LOG.info(webElement.getText());
+				}
+			}
+		}
+	}
+
+//	@AfterClass
+//	public void tearDown() {
+//		 Helper.closeWindow();
+//	}
+}

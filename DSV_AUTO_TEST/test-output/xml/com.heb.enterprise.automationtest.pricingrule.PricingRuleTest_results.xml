@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DSV_Assortment"
+           tests="8"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="42.360">
+  <properties />
+  
+  
+            <testcase name="TC_Pricing_Rules_001_Test" time="0.336" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_004_Test" time="5.258" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_002_Test" time="5.225" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_003_Test" time="7.256" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_006_Test" time="6.451" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_007_Test" time="6.402" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_005_Test" time="5.722" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+                <testcase name="TC_Pricing_Rules_008_Test" time="5.710" classname="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest" />
+      
+</testsuite>

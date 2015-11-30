@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/b0dba767227e001510bcb455eb270ba7=b0dba767227e001510bcb455eb270ba7;http\://10.10.30.15/svn/COMS/trunk/DSV_Auto_Test/DSV_AUTO_TEST;http\://10.10.30.15/svn/COMS/trunk/DSV_Auto_Test/DSV_AUTO_TEST;branches;tags;trunk;true;11a90729-73f6-4afd-9d57-120ea15e5f0f;http\://10.10.30.15/svn/COMS;;false;<http\://10.10.30.15\:80> VODC SVN Login;;0
+synch_info/contigous=true

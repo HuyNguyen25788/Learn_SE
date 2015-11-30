@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DSV_Assortment"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="21.095">
+  <properties />
+  
+  
+            <testcase name="T001_LoadDashboardPage" time="0.267" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T006_testSearchProduct" time="4.660" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T005_testDataVendorCombobox" time="2.064" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T003_testRetailCostReviewDefault" time="0.122" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T008_testCommodityTrends" time="13.755" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T002_testProductOverview" time="0.114" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+                <testcase name="T004_testProductSearch" time="0.113" classname="com.heb.enterprise.automationtest.dashboard.DashboardTest" />
+      
+</testsuite>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="DSV_Assortment(failed)">
+    <classes>
+      <class name="com.heb.enterprise.automationtest.globaldefaults.GlobalDefaultTest">
+        <methods>
+          <include name="t001_loadSubDepartment"/>
+          <include name="t003_loadDepartmentRule"/>
+          <include name="t004_loadCommodityRule"/>
+          <include name="t002_loadSubCommodities"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.globaldefaults.GlobalDefaultTest -->
+      <class name="com.heb.enterprise.automationtest.productreview.ProductReviewTest">
+        <methods>
+          <include name="tc_Products_Review_002_2_Test"/>
+          <include name="tc_Products_Review_001_8_Test"/>
+          <include name="tc_Products_Review_004_2_Test"/>
+          <include name="tc_Products_Review_001_11_Test"/>
+          <include name="tc_Products_Review_001_14_Test"/>
+          <include name="tc_Products_Review_001_5_Test"/>
+          <include name="tc_Products_Review_006_2_Test"/>
+          <include name="tc_Products_Review_005_2_Test"/>
+          <include name="tc_Products_Review_001_6_Test"/>
+          <include name="tc_Products_Review_008_Test"/>
+          <include name="tc_Products_Review_001_9_Test"/>
+          <include name="tc_Products_Review_007_2_Test"/>
+          <include name="tc_Products_Review_005_3_Test"/>
+          <include name="tc_Products_Review_004_3_Test"/>
+          <include name="tc_Products_Review_007_3_Test"/>
+          <include name="tc_Products_Review_001_12_Test"/>
+          <include name="tc_Products_Review_006_3_Test"/>
+          <include name="tc_Products_Review_001_15_Test"/>
+          <include name="tc_Products_Review_001_10_Test"/>
+          <include name="tc_Products_Review_001_13_Test"/>
+          <include name="tc_Products_Review_001_4_Test"/>
+          <include name="tc_Products_Review_005_4_Test"/>
+          <include name="tc_Products_Review_001_16_Test"/>
+          <include name="tc_Products_Review_001_7_Test"/>
+          <include name="tc_Products_Review_003_Test"/>
+          <include name="tc_Products_Review_006_4_Test"/>
+          <include name="setupMethod"/>
+          <include name="tc_Products_Review_007_1_Test"/>
+          <include name="tc_Products_Review_004_1_Test"/>
+          <include name="tc_Products_Review_006_1_Test"/>
+          <include name="setup"/>
+          <include name="tc_Products_Review_001_1_Test"/>
+          <include name="tc_Products_Review_002_1_Test"/>
+          <include name="tc_Products_Review_004_4_Test"/>
+          <include name="tc_Products_Review_005_1_Test"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.productreview.ProductReviewTest -->
+      <class name="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest">
+        <methods>
+          <include name="teardownClass"/>
+          <include name="setupTest"/>
+          <include name="teardown"/>
+          <include name="setupAllTest"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.pricingrule.PricingRuleTest -->
+      <class name="com.heb.enterprise.automationtest.vendormanagement.VendorManagementTest">
+        <methods>
+          <include name="vendorMangementTC9"/>
+          <include name="vendorMangementTC6"/>
+          <include name="vendorMangementTC12"/>
+          <include name="vendorMangementTC5"/>
+          <include name="vendorMangementTC8"/>
+          <include name="vendorMangementTC10"/>
+          <include name="vendorMangementTC7"/>
+          <include name="vendorMangementTC2"/>
+          <include name="vendorMangementTC1"/>
+          <include name="vendorMangementTC4"/>
+          <include name="vendorMangementTC3"/>
+          <include name="vendorMangementTC11"/>
+          <include name="setupBeforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.vendormanagement.VendorManagementTest -->
+      <class name="com.heb.enterprise.automationtest.surrogatemapping.SurrogateMappingTest">
+        <methods>
+          <include name="SearchIconUser"/>
+          <include name="SearchUser"/>
+          <include name="DeleteNo"/>
+          <include name="AddNewwithIcon"/>
+          <include name="CheckTitle"/>
+          <include name="DeleteYes"/>
+          <include name="beforeClass"/>
+          <include name="PaggingBar"/>
+          <include name="AddNewWithButton"/>
+          <include name="BreadCrumb"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.surrogatemapping.SurrogateMappingTest -->
+      <class name="com.heb.enterprise.automationtest.common.InitialTestSuite">
+        <methods>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.common.InitialTestSuite -->
+      <class name="com.heb.enterprise.automationtest.costreview.CostReviewTest">
+        <methods>
+          <include name="testCase_DSV_Cost_Reivew_010"/>
+          <include name="beforeClass"/>
+          <include name="testCase_DSV_Cost_Reivew_009"/>
+          <include name="testCase_DSV_Cost_Reivew_008"/>
+          <include name="testCase_DSV_Cost_Reivew_005"/>
+          <include name="testCase_DSV_Cost_Reivew_004"/>
+          <include name="testCase_DSV_Cost_Reivew_007"/>
+          <include name="testCase_DSV_Cost_Reivew_006"/>
+          <include name="testCase_DSV_Cost_Reivew_001"/>
+          <include name="testCase_DSV_Cost_Reivew_012"/>
+          <include name="testCase_DSV_Cost_Reivew_011"/>
+          <include name="testCase_DSV_Cost_Reivew_003"/>
+          <include name="testCase_DSV_Cost_Reivew_002"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.costreview.CostReviewTest -->
+      <class name="com.heb.enterprise.automationtest.dashboard.DashboardTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.dashboard.DashboardTest -->
+      <class name="com.heb.enterprise.automationtest.retailinquiry.RetailInquiryTest">
+        <methods>
+          <include name="testCase_DSV_Retail_Inquiry_005"/>
+          <include name="testCase_DSV_Retail_Inquiry_003"/>
+          <include name="testCase_DSV_Retail_Inquiry_001"/>
+          <include name="testCase_DSV_Retail_Inquiry_004"/>
+          <include name="beforeClass"/>
+          <include name="setupBeforeMethod"/>
+          <include name="testCase_DSV_Retail_Inquiry_002"/>
+        </methods>
+      </class> <!-- com.heb.enterprise.automationtest.retailinquiry.RetailInquiryTest -->
+    </classes>
+  </test> <!-- DSV_Assortment(failed) -->
+</suite> <!-- Failed suite [Suite] -->

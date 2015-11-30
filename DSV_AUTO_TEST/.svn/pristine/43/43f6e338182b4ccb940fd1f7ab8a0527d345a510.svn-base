@@ -1,0 +1,6 @@
+# Login
+input_username = #j_username
+input_pass = #password
+
+# Text
+error_mess = Your login attempt was unsuccessful. Please try again.\nCause: Bad credentials

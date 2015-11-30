@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="DSV_Assortment">
+		<classes>
+			<class name="com.heb.enterprise.automationtest.common.InitialTestSuite">
+			</class>
+			<class name="com.heb.enterprise.automationtest.pricingrule.PricingRuleTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.dashboard.DashboardTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.surrogatemapping.SurrogateMappingTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.vendormanagement.VendorManagementTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.retailinquiry.RetailInquiryTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.productreview.ProductReviewTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.costreview.CostReviewTest">
+			</class>
+			<class name="com.heb.enterprise.automationtest.globaldefaults.GlobalDefaultTest">
+			</class>
+		</classes>
+	</test>
+</suite>

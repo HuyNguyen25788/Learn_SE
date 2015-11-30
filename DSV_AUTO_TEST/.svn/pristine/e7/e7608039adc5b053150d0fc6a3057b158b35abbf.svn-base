@@ -1,0 +1,11 @@
+url_base = http://10.10.30.155:8080
+url_login = /assortment/login
+url_global = /assortment/global-assortment-default
+url_vendor_management = /assortment/vendor-management
+url_pricing_rule = /assortment/pricing-rules
+url_surrogate = /assortment/surrogate-mapping
+url_product_review = /assortment/product-review
+url_retail_cost_review = /assortment/retail-cost-review
+url_retail_inquiry = /assortment/retail-inquiry
+url_report_new_items = /assortment/reportNewItems
+
